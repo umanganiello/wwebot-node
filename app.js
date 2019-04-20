@@ -39,6 +39,7 @@ function getUpdates(offset, limit) {
             var updates = response.body.result;
             var maxUpdateId = 0;
             updates.forEach(function(update) {
+                //console.log("*******\n "+JSON.stringify(update)+"*******");
                 var chatId = update.message.chat.id;
                 var firstName = update.message.from.first_name;
                 var lastName = update.message.from.last_name;
